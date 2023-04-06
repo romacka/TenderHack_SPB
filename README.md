@@ -1,3 +1,3 @@
 # TenderHack_SPB
 Победное решение
-![Иллюстрация к проекту](https://github.com/jon/coolproject/raw/master/image/image.png)
+![Иллюстрация к проекту](https://github.com/romacka/TenderHack_SPB/blob/main/group_photo.jpg)
