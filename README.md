@@ -1,2 +1,3 @@
 # TenderHack_SPB
-The 1`st place solution
+Победное решение
+![Иллюстрация к проекту](https://github.com/jon/coolproject/raw/master/image/image.png)
