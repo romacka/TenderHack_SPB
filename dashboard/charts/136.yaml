@@ -1,0 +1,62 @@
+slice_name: "\u041F\u0440\u043E\u0446\u0435\u043D\u0442 \u0432\u044B\u0438\u0433\u0440\
+  \u0430\u043D\u043D\u044B\u0445 \u043A\u043E\u043D\u0442\u0440\u0430\u043A\u0442\u043E\
+  \u0432"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 31__table
+  viz_type: big_number
+  slice_id: 136
+  granularity_sqla: dt
+  time_grain_sqla: P1M
+  time_range: No filter
+  metric:
+    aggregate: MAX
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: conversion
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 797
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: FLOAT
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: MAX(conversion)
+    optionName: metric_27384mf0mpt_k8djofysxjf
+    sqlExpression: null
+  adhoc_filters: []
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    a: 1
+    b: 68
+    g: 127
+    r: 255
+  header_font_size: 0.6
+  subheader_font_size: 0.15
+  y_axis_format: .2%
+  time_format: smart_date
+  rolling_type: None
+  extra_form_data: {}
+  dashboards:
+  - 13
+query_context: '{"datasource":{"id":31,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"dt","filters":[],"extras":{"time_grain_sqla":"P1M","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"aggregate":"MAX","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"conversion","description":null,"expression":null,"filterable":true,"groupby":true,"id":797,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"FLOAT","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"MAX(conversion)","optionName":"metric_27384mf0mpt_k8djofysxjf","sqlExpression":null}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":[],"aggregates":{"MAX(conversion)":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"31__table","viz_type":"big_number","slice_id":136,"granularity_sqla":"dt","time_grain_sqla":"P1M","time_range":"No
+  filter","metric":{"aggregate":"MAX","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"conversion","description":null,"expression":null,"filterable":true,"groupby":true,"id":797,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"FLOAT","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"MAX(conversion)","optionName":"metric_27384mf0mpt_k8djofysxjf","sqlExpression":null},"adhoc_filters":[],"show_trend_line":true,"start_y_axis_at_zero":true,"color_picker":{"a":1,"b":68,"g":127,"r":255},"header_font_size":0.6,"subheader_font_size":0.15,"y_axis_format":".2%","time_format":"smart_date","rolling_type":"None","extra_form_data":{},"dashboards":[13],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: bd805b83-e0ea-43c5-8194-ecfc8a10b414
+version: 1.0.0
+dataset_uuid: fe004b77-b27e-4c50-ba9e-937d61e93797

@@ -1,0 +1,57 @@
+table_name: competition_cats
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: public
+sql: "select theme, avg(compet_ratios) as cr from (\nselect \n  DATE_TRUNC('month',\
+  \ pur.publish_date) as month, \n  pur.theme,\n  count(DISTINCT par.supplier_inn)::float\
+  \ / count(DISTINCT par.id)::float as compet_ratios\nfrom purchases pur\njoin participants\
+  \ par \n  on pur.id = par.id\ngroup by DATE_TRUNC('month', pur.publish_date), pur.theme\n\
+  ) t\ngroup by theme"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 55d19156-f51a-4f3f-8839-09a9ea6245e7
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: cr
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: theme
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee

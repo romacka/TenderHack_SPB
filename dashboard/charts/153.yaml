@@ -1,0 +1,111 @@
+slice_name: "\u0420\u0435\u0433\u0438\u043E\u043D\u044B \u0441 \u043C\u0438\u043D\u0438\
+  \u043C\u0430\u043B\u044C\u043D\u043E\u0439 \u043A\u043E\u043D\u043A\u0443\u0440\u0435\
+  \u043D\u0446\u0438\u0435\u0439"
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 39__table
+  viz_type: table
+  slice_id: 153
+  granularity_sqla: publish_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: aggregate
+  groupby:
+  - expressionType: SQL
+    label: "\u0420\u0435\u0433\u0438\u043E\u043D"
+    sqlExpression: 'delivery_region '
+  metrics:
+  - expressionType: SQL
+    sqlExpression: ROUND(COUNT(DISTINCT supplier_inn) / (COUNT(DISTINCT customer_inn)
+      + 0.0001), 3)
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: "\u041A\u043E\u044D\u0444\u0444\u0438\u0446\u0438\u0435\u043D\u0442 \u043A\
+      \u043E\u043D\u043A\u0443\u0440\u0435\u043D\u0446\u0438\u0438"
+    optionName: metric_940u6qkaubo_45g1jnlidkh
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters: []
+  timeseries_limit_metric:
+    expressionType: SQL
+    sqlExpression: ROUND(COUNT(DISTINCT supplier_inn) / (COUNT(DISTINCT customer_inn)
+      + 0.0001), 3)
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: ROUND(COUNT(DISTINCT supplier_inn) / (CO...
+    optionName: metric_r5qfwnu6uif_xylwkyqc3k
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: false
+  show_totals: false
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: true
+  align_pn: true
+  color_pn: true
+  allow_rearrange_columns: true
+  column_config:
+    delivery_region:
+      horizontalAlign: left
+      truncateLongCells: true
+    "\u041A\u043E\u044D\u0444\u0444\u0438\u0446\u0438\u0435\u043D\u0442 \u043A\u043E\u043D\u043A\u0443\u0440\u0435\u043D\u0446\u0438\u0438":
+      d3NumberFormat: SMART_NUMBER
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 13
+query_context: "{\"datasource\":{\"id\":39,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"time_range\":\"No filter\",\"granularity\":\"publish_date\",\"filters\"\
+  :[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[{\"expressionType\":\"SQL\",\"label\":\"\u0420\u0435\u0433\u0438\
+  \u043E\u043D\",\"sqlExpression\":\"delivery_region \"}],\"metrics\":[{\"expressionType\"\
+  :\"SQL\",\"sqlExpression\":\"ROUND(COUNT(DISTINCT supplier_inn) / (COUNT(DISTINCT\
+  \ customer_inn) + 0.0001), 3)\",\"column\":null,\"aggregate\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":true,\"label\":\"\u041A\u043E\u044D\u0444\u0444\u0438\u0446\
+  \u0438\u0435\u043D\u0442 \u043A\u043E\u043D\u043A\u0443\u0440\u0435\u043D\u0446\u0438\
+  \u0438\",\"optionName\":\"metric_940u6qkaubo_45g1jnlidkh\"}],\"orderby\":[[{\"expressionType\"\
+  :\"SQL\",\"sqlExpression\":\"ROUND(COUNT(DISTINCT supplier_inn) / (COUNT(DISTINCT\
+  \ customer_inn) + 0.0001), 3)\",\"column\":null,\"aggregate\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":false,\"label\":\"ROUND(COUNT(DISTINCT supplier_inn) /\
+  \ (CO...\",\"optionName\":\"metric_r5qfwnu6uif_xylwkyqc3k\"},true]],\"annotation_layers\"\
+  :[],\"row_limit\":1000,\"series_limit\":0,\"series_limit_metric\":{\"expressionType\"\
+  :\"SQL\",\"sqlExpression\":\"ROUND(COUNT(DISTINCT supplier_inn) / (COUNT(DISTINCT\
+  \ customer_inn) + 0.0001), 3)\",\"column\":null,\"aggregate\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":false,\"label\":\"ROUND(COUNT(DISTINCT supplier_inn) /\
+  \ (CO...\",\"optionName\":\"metric_r5qfwnu6uif_xylwkyqc3k\"},\"order_desc\":false,\"\
+  url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"post_processing\"\
+  :[]}],\"form_data\":{\"datasource\":\"39__table\",\"viz_type\":\"table\",\"slice_id\"\
+  :153,\"granularity_sqla\":\"publish_date\",\"time_grain_sqla\":\"P1D\",\"time_range\"\
+  :\"No filter\",\"query_mode\":\"aggregate\",\"groupby\":[{\"expressionType\":\"\
+  SQL\",\"label\":\"\u0420\u0435\u0433\u0438\u043E\u043D\",\"sqlExpression\":\"delivery_region\
+  \ \"}],\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"ROUND(COUNT(DISTINCT\
+  \ supplier_inn) / (COUNT(DISTINCT customer_inn) + 0.0001), 3)\",\"column\":null,\"\
+  aggregate\":null,\"datasourceWarning\":false,\"hasCustomLabel\":true,\"label\":\"\
+  \u041A\u043E\u044D\u0444\u0444\u0438\u0446\u0438\u0435\u043D\u0442 \u043A\u043E\u043D\
+  \u043A\u0443\u0440\u0435\u043D\u0446\u0438\u0438\",\"optionName\":\"metric_940u6qkaubo_45g1jnlidkh\"\
+  }],\"all_columns\":[],\"percent_metrics\":[],\"adhoc_filters\":[],\"timeseries_limit_metric\"\
+  :{\"expressionType\":\"SQL\",\"sqlExpression\":\"ROUND(COUNT(DISTINCT supplier_inn)\
+  \ / (COUNT(DISTINCT customer_inn) + 0.0001), 3)\",\"column\":null,\"aggregate\"\
+  :null,\"datasourceWarning\":false,\"hasCustomLabel\":false,\"label\":\"ROUND(COUNT(DISTINCT\
+  \ supplier_inn) / (CO...\",\"optionName\":\"metric_r5qfwnu6uif_xylwkyqc3k\"},\"\
+  order_by_cols\":[],\"row_limit\":1000,\"server_page_length\":10,\"order_desc\":false,\"\
+  show_totals\":false,\"table_timestamp_format\":\"smart_date\",\"include_search\"\
+  :true,\"show_cell_bars\":true,\"align_pn\":true,\"color_pn\":true,\"allow_rearrange_columns\"\
+  :true,\"column_config\":{\"delivery_region\":{\"horizontalAlign\":\"left\",\"truncateLongCells\"\
+  :true},\"\u041A\u043E\u044D\u0444\u0444\u0438\u0446\u0438\u0435\u043D\u0442 \u043A\
+  \u043E\u043D\u043A\u0443\u0440\u0435\u043D\u0446\u0438\u0438\":{\"d3NumberFormat\"\
+  :\"SMART_NUMBER\"}},\"conditional_formatting\":[],\"extra_form_data\":{},\"dashboards\"\
+  :[13],\"force\":false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\"\
+  :\"json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: e2b8345b-0d41-4d36-a25e-88bd9a7c3a27
+version: 1.0.0
+dataset_uuid: 46b3e39a-d3fa-45b7-a11f-51d594bfc2b1

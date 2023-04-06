@@ -1,0 +1,73 @@
+table_name: conversion_dataset
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: null
+sql: "with sales as (\n  select p.id, -- PURCHASES with CONTRACTS\n         p.delivery_region\
+  \ as region,\n         c.price,\n         p.publish_date as start_date\n  from purchases\
+  \ p\n  join contracts c on p.id = c.id\n), sup_sales as (\n  select p.supplier_inn,\n\
+  \         p.is_winner,\n         p.id,\n         sls.start_date\n  from participants\
+  \ p\n  join sales sls on p.id = sls.id\n)\n\n\nselect \n  supplier_inn,\n  DATE_TRUNC('month',\
+  \ start_date) as dt,\n  (sum(CASE WHEN is_winner='\u0414\u0430' THEN 1 ELSE 0 END)::float\
+  \ / count(*)::float) as conversion\nfrom sup_sales\ngroup by supplier_inn, DATE_TRUNC('month',\
+  \ start_date)"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: fe004b77-b27e-4c50-ba9e-937d61e93797
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: dt
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: conversion
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: supplier_inn
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee

@@ -1,0 +1,162 @@
+table_name: sup_cats_dataset
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: public
+sql: "select \n  supplier_inn, \n  id, con.price, \n  con.price_category,\n  pur.theme,\n\
+  \  pur.delivery_region as region,\n  pur.publish_date as beg_date,\n  con.contract_conclusion_date\
+  \ as fin_date,\n  (con.contract_conclusion_date::date - pur.publish_date::date)\
+  \ as date_diff,\n  par.is_winner\nfrom participants par\njoin purchases pur using(id)\n\
+  join contracts con using(id)\nwhere con.contract_conclusion_date > '2020-01-01'\n\
+  and par.is_winner = '\u0414\u0430'"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 9045dfc6-dd72-4abf-acca-1f78d45f431d
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: beg_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: fin_date
+  verbose_name: null
+  is_dttm: true
+  is_active: null
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: price
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: supplier_inn
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: date_diff
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: price_category
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: is_winner
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: id
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: theme
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: region
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee

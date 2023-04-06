@@ -1,0 +1,90 @@
+table_name: region_sups
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: public
+sql: "with sales as (\n  select p.id, \n         p.delivery_region as region,\n  \
+  \       c.price,\n         p.publish_date as start_date\n  from purchases p\n  join\
+  \ contracts c on p.id = c.id\n), sup_sales as (\n  select p.supplier_inn,\n    \
+  \     sls.region,\n         p.is_winner,\n         p.id,\n         sls.start_date\n\
+  \  from participants p\n  join sales sls on p.id = sls.id\n)\n\nselect * from sup_sales"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 40ae97cf-b23f-4412-878e-b73f5b54a32b
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: start_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: supplier_inn
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: is_winner
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: region
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee

@@ -1,0 +1,52 @@
+slice_name: "\u0421\u0440\u0435\u0434\u043D\u0435\u0435 \u0437\u043D\u0430\u0447\u0435\
+  \u043D\u0438\u0435 \u043F\u0430\u0434\u0435\u043D\u0438\u044F \u041D\u041C\u0426\
+  \u041A"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 35__table
+  viz_type: big_number
+  slice_id: 140
+  granularity_sqla: dt
+  time_grain_sqla: P1M
+  time_range: No filter
+  metric:
+    aggregate: MAX
+    column:
+      column_name: draw_down
+      groupby: true
+      is_dttm: false
+      name: draw_down
+      type: FLOAT
+      type_generic: 0
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: MAX(draw_down)
+    optionName: metric_pe8lem2v4ua_clzqqarj49
+    sqlExpression: null
+  adhoc_filters: []
+  show_trend_line: true
+  start_y_axis_at_zero: true
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  header_font_size: 0.6
+  subheader_font_size: 0.15
+  y_axis_format: .2%
+  time_format: smart_date
+  rolling_type: None
+  extra_form_data: {}
+  dashboards:
+  - 13
+query_context: '{"datasource":{"id":35,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"dt","filters":[],"extras":{"time_grain_sqla":"P1M","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"aggregate":"MAX","column":{"column_name":"draw_down","groupby":true,"is_dttm":false,"name":"draw_down","type":"FLOAT","type_generic":0},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"MAX(draw_down)","optionName":"metric_pe8lem2v4ua_clzqqarj49","sqlExpression":null}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":true,"post_processing":[{"operation":"pivot","options":{"index":["__timestamp"],"columns":[],"aggregates":{"MAX(draw_down)":{"operator":"mean"}},"drop_missing_columns":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"35__table","viz_type":"big_number","slice_id":140,"granularity_sqla":"dt","time_grain_sqla":"P1M","time_range":"No
+  filter","metric":{"aggregate":"MAX","column":{"column_name":"draw_down","groupby":true,"is_dttm":false,"name":"draw_down","type":"FLOAT","type_generic":0},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"MAX(draw_down)","optionName":"metric_pe8lem2v4ua_clzqqarj49","sqlExpression":null},"adhoc_filters":[],"show_trend_line":true,"start_y_axis_at_zero":true,"color_picker":{"a":1,"b":135,"g":122,"r":0},"header_font_size":0.6,"subheader_font_size":0.15,"y_axis_format":".2%","time_format":"smart_date","rolling_type":"None","extra_form_data":{},"dashboards":[13],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 0fb7404e-f07e-4463-9420-87e49de0372a
+version: 1.0.0
+dataset_uuid: 60aac3ce-15aa-4a39-9ce8-b9c5a6673c40

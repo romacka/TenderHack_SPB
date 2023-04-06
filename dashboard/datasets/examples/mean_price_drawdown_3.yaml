@@ -1,0 +1,71 @@
+table_name: mean_price_drawdown_3
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: public
+sql: "with sales as (\n  select p.id, \n         p.delivery_region as region,\n  \
+  \       p.price as beg_price,\n         c.price as fin_price,\n         p.publish_date\
+  \ as start_date\n  from purchases p\n  join contracts c on p.id = c.id\n), sup_sales\
+  \ as (\n  select p.supplier_inn,\n         sls.start_date,\n         sls.beg_price,\n\
+  \         sls.fin_price,\n         sls.region,\n         p.is_winner,\n        \
+  \ p.id\n  from participants p\n  join sales sls on p.id = sls.id\n)\n\nselect \n\
+  \  supplier_inn,\n  DATE_TRUNC('month', start_date) as dt,\n  AVG(((fin_price -\
+  \ beg_price) / beg_price)) * -1 as draw_down\nfrom sup_sales\nwhere fin_price <\
+  \ beg_price and beg_price != 0 and fin_price != 0 and is_winner = '\u0414\u0430\
+  '\ngroup by supplier_inn, DATE_TRUNC('month', start_date)"
+params: null
+template_params: null
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: 60aac3ce-15aa-4a39-9ce8-b9c5a6673c40
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: dt
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: draw_down
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: supplier_inn
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee
